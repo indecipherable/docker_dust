@@ -1,0 +1,34 @@
+version: "3"
+services:
+#  docker-projects_mediawiki:
+#    image: docker-projects_mediawiki
+#  mediawiki:
+#    image: mediawiki
+#  docker-projects_redmine:
+#    image: docker-projects_redmine
+#  redmine:
+#    image: redmine
+#  nginx:
+#    image: nginx
+#    ports:
+#      - 80:80
+  mysql:
+    image: mysql
+    container_name: mysql
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: "nice_password"
+      MYSQL_DATABASE: "hey_steve"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "nice_password"
+#  docker-projects_httpd:
+#    image: docker-projects_httpd
+#  httpd:
+#    image: httpd
+#  certbot-dns-digitalocean:
+#    image: certbot/dns-digitalocean
+#  certbot-certbot:
+#    image: certbot/certbot
+#  webdevops-php-nginx:
+#    image: webdevops/php-nginx
